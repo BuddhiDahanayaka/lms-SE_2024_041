@@ -5,10 +5,10 @@ public abstract class LibraryItem {
     private String title;
     private boolean isBorrowed;
 
-    public LibraryItem(String id, String title, boolean isBorrowed) {
+    public LibraryItem(String id, String title) {
         setId(id);
         setTitle(title);
-        isBorrowed = false;
+        this.isBorrowed = false;
     }
 
     public String getId(){
@@ -19,7 +19,7 @@ public abstract class LibraryItem {
         return title;
     }
 
-    public boolean idBorrowed(){
+    public boolean isBorrowed(){
         return isBorrowed;
     }
 
