@@ -1,16 +1,44 @@
 import lms.model.*;
+import lms.service.*;
 
 public static void main(String[] args) {
-    LibraryItem b = new Book("B001", "Clean Code", "Robert C. Martin");
-    LibraryItem d = new DVD("D001", "Intro to Algorithms", 120);
+    services services = new services();
 
-    System.out.println(b.calculateLateFee(3));   // expect 30.0
-    System.out.println(d.calculateLateFee(3));   // expect 75.0
+    LibraryItem b1 = new Book("B001", "Clean Code", "Robert C. Martin");
+    LibraryItem b2 = new Book("B002","Harry Potter","J. K. Rowling");
+    LibraryItem b3 = new Book("B003","Atomic Habits","James Clear");
+    LibraryItem b4 = new Book("", "", "Nobody");
 
-    new Book("", "Nobody", "Nobody");           // expect IllegalArgumentException
+    LibraryItem d1 = new DVD("D001", "Intro to Algorithms", 120);
+    LibraryItem d2 = new DVD("D002","Grammar Tree",200);
+    LibraryItem d3 = new DVD("D003","OOP Fundamentals",100);
 
-    System.out.println(new Student("M001", "Your Name").getMaxBorrowLimit());
-    System.out.println(new Staff("M008", "Your Name").getMaxBorrowLimit());
+    Member stu1 = new Student("SE001","Nipuni Jayakody");
+    Member stu2 = new Student("SE002","Kasun Fernando");
+    Member stu3 = new Student("SE003","Jayani Dahanayaka");
+    Member stu4 = new Student("", "");
 
-    new Student("", "Your Name");
+    Member sta1 = new Staff("S001","Jagath Gunawardhana");
+    Member sta2 = new Staff("S002","Disna Pathirana");
+    Member sta3 = new Staff("S003","Kamal Rathnayaka");
+
+    services.addItem(b1);
+    services.addItem(b2);
+    services.addItem(b3);
+    services.addItem(b4);
+    services.addItem(d1);
+    services.addItem(d2);
+    services.addItem(d3);
+
+    services.addMember(stu1);
+    services.addMember(stu2);
+    services.addMember(stu3);
+    services.addMember(stu4);
+    services.addMember(sta1);
+    services.addMember(sta2);
+    services.addMember(sta3);
+
+    services.listItems();
+    services.listMembers();
+    services.printAllLateFees(3);
 }

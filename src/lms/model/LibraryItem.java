@@ -25,7 +25,7 @@ public abstract class LibraryItem {
 
     public void setId(String id) {
         if (id == null || id.trim().isEmpty()){
-            throw new IllegalArgumentException("ID cannot be blank");
+            System.out.println(new IllegalArgumentException("ID cannot be blank"));
         } else {
             this.id = id;
         }
@@ -33,7 +33,7 @@ public abstract class LibraryItem {
 
     public void setTitle(String title) {
         if (title == null || title.trim().isEmpty()){
-            throw new IllegalArgumentException("Title cannot be blank");
+            System.out.println(new IllegalArgumentException("Title cannot be blank"));
         } else {
             this.title = title;
         }

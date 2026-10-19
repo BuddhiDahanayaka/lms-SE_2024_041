@@ -14,7 +14,7 @@ public class Book extends LibraryItem {
 
     public void setAuthor(String author) {
         if (author == null || author.trim().isEmpty()){
-            throw new IllegalArgumentException("Author cannot be blank");
+            System.out.println(new IllegalArgumentException("Author cannot be blank"));
         } else {
             this.author = author;
         }

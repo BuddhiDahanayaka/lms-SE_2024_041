@@ -5,7 +5,7 @@ import lms.model.Member;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library {
+public class services {
         private final List<LibraryItem> items = new ArrayList<>();
         private final List<Member> members = new ArrayList<>();
 

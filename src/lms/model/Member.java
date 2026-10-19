@@ -31,7 +31,7 @@ public class Member {
 
     public void setMemberId(String memberId) {
         if (memberId == null || memberId.trim().isEmpty()){
-            throw new IllegalArgumentException("ID cannot be blank");
+            System.out.println(new IllegalArgumentException("ID cannot be blank"));
         } else {
             this.memberId = memberId;
         }
@@ -39,7 +39,7 @@ public class Member {
 
     public void setName(String name) {
         if (name == null || name.trim().isEmpty()){
-            throw new IllegalArgumentException("Name cannot be blank");
+            System.out.println(new IllegalArgumentException("Name cannot be blank"));
         } else {
             this.name = name;
         }
@@ -47,7 +47,7 @@ public class Member {
 
     public void setBorrowedCount(int borrowedCount) {
         if (borrowedCount < 0){
-            throw new IllegalArgumentException("Invalid count");
+            System.out.println(new IllegalArgumentException("Invalid Count"));
         } else {
             this.borrowedCount = borrowedCount;
         }
